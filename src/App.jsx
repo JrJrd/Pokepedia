@@ -1,15 +1,27 @@
-import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Pokedex from './Containers/Pokedex'
-import AppNavigator from "./components/AppNavigator";
+import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom"; 
+import { pokemList, HomePage, SinglePokmPage } from "./components/pages";
+import PokemonList from "./components/pages/pokemList";
 
-function App() {
+function App(props) {
   return (
-    <Router>
-      <AppNavigator />
-      <Route exact path="/" component={Pokedex} />
-    </Router>
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="list">Full List</NavLink>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="list" element={<PokemonList />} />
+        <Route path="list/:id" element={<SinglePokmPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
