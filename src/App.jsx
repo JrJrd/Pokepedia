@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom"; 
-import { pokemList, HomePage, SinglePokmPage } from "./components/pages";
-import PokemonList from "./components/pages/pokemList";
+import { PokemonList, HomePage, SinglePokmPage } from "./components/pages";
 
 function App(props) {
   return (

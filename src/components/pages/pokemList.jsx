@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 function PokemonList(props) {
   const [list, setList] = useState([]);
 
@@ -22,11 +22,19 @@ function PokemonList(props) {
   console.log("Rendered list:", list);
 
   return (
+    <div>
+
+    
     <ul>
       {list.map((pokemon) => (
-        <li key={pokemon.id}>{pokemon.name}</li>
-      ))}
+        <li key={pokemon.id}>
+       <Link to={`/list/${pokemon.id}`}>{pokemon.name}</Link>
+
+
+        </li>
+        ))}
     </ul>
+        </div>
   );
 }
 

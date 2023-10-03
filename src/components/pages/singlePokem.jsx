@@ -32,7 +32,9 @@ function SinglePokmPage(props) {
       </div>
       <div>
         <h1>{item.name}</h1>
-        <p>Type: {item.type.join(", ")}</p>
+        {item.type && Array.isArray(item.type) && (
+          <p>Type: {item.type.join(", ")}</p>
+        )}
         <p>Height: {item.height}</p>
         <p>Weight: {item.weight}</p>
         <p>Candy: {item.candy}</p>
@@ -41,7 +43,9 @@ function SinglePokmPage(props) {
         <p>Spawn Chance: {item.spawn_chance}</p>
         <p>Average Spawns: {item.avg_spawns}</p>
         <p>Spawn Time: {item.spawn_time}</p>
-        <p>Weaknesses: {item.weaknesses.join(", ")}</p>
+        {item.weaknesses && Array.isArray(item.weaknesses) && (
+          <p>Weaknesses: {item.weaknesses.join(", ")}</p>
+        )}
       </div>
     </div>
   );
