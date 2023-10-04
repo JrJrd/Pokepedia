@@ -23,14 +23,14 @@ function SinglePokmPage(props) {
 
   useEffect(() => {
     getList();
-  }, [id]);
+  }, []);
 
   return (
-    <div>
+    <div >
       <div>
         <img src={item.img} alt={`${item.num} Poster`} />
       </div>
-      <div>
+      <div className="info">
         <h1>{item.name}</h1>
         {item.type && Array.isArray(item.type) && (
           <p>Type: {item.type.join(", ")}</p>

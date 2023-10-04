@@ -6,12 +6,12 @@ function App(props) {
   return (
     <BrowserRouter>
       <nav>
-        <ul>
-          <li>
+        <ul className="special-list">
+          <li className="homeBtn">
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
-            <NavLink to="list">Full List</NavLink>
+          <li className="listBtn">
+            <NavLink to="list">List</NavLink>
           </li>
         </ul>
       </nav>

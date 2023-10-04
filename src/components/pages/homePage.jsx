@@ -42,7 +42,15 @@ function HomePage(props) {
           <img src={pokemonData.img} alt={`${pokemonData.name} Poster`} />
           <p>Type: {pokemonData.type.join(", ")}</p>
           <p>Height: {pokemonData.height}</p>
-          <p>Weight: {pokemonData.weight}</p>
+          <p>Candy: {pokemonData.candy}</p>
+        <p>Candy Count: {pokemonData.candy_count}</p>
+        <p>Egg: {pokemonData.egg}</p>
+        <p>Spawn Chance: {pokemonData.spawn_chance}</p>
+        <p>Average Spawns: {pokemonData.avg_spawns}</p>
+        <p>Spawn Time: {pokemonData.spawn_time}</p>
+      
+        
+
         </div>
       ) : (
         searchText && <p>No Pokémon found with the name: {searchText}</p>
